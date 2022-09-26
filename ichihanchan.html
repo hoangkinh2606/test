@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ichihanchan.css">
+    <link rel="stylesheet" href="ichihanchan_mobile.css">
+    <link rel="stylesheet" href="ichihanchan_pc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <title>Ichihanchan</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $('.toggle').click(function(){
+                $('.menu').slideToggle();
+            });
+        })
+    </script>
+    <!-- header start -->
+    <header>
+        <section class="header_now">
+            <!-- <div class="header_one">
+                <h1 class="logo"> 
+                    <a href="#"><img src="img/logo@2x-8.png" alt="logo"></a>
+                </h1>
+                <div class="toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div> -->
+            <h1 class="logo"> 
+                <a href="#"><img src="img/logo@2x-8.png" alt="logo"></a>
+            </h1>
+            <div class="menu">
+                <div class="toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="menu_list">
+                    <li><a href="#">商品情報</a></li>
+                    <li><a href="#"></i>CM</a></li>
+                    <li><a href="#">ヒストリー</a></li>
+                    <li><a href="#">ちょい足しレシピ</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+    <!-- end header -->
+    <main>
+        <!-- mv start -->
+        <section class="mv_main">
+                <img class="mv_main_pc" src="img/mv_pc.png" alt="mv_pc">
+                <img class="mv_main_mobile" src="img/main_sp@2x-8.png" alt="mv_mobile">
+        </section>
+        <!-- end mv -->
+        <!-- video start -->
+        <section class="video_main">
+            <h2 class="video_title">
+                <img src="img/cm_logo@2x-8.png" alt="cm_logo">
+            </h2>
+            <div class="video_informacion">
+                <div class="video_one">
+                    <a href="#"><img src="svg/Asset6.svg" alt="video_svg"></a>
+                    <p>ソース篇</p>
+                </div>
+                <div class="video_two">
+                    <a href="#"><img src="svg/Asset7.svg" alt="video_svg"></a>
+                    <p>塩だれ・明太子篇</p>
+                </div>
+            </div>
+        </section>
+        <!-- end video -->
+        <!-- item_title start -->
+        <section class="product_item_title">
+            <img src="img/item_title@2x-8.png" alt="item_title">
+        </section>
+        <!-- end item_title -->
+        <!-- product start -->
+        <!-- product label1 red start -->
+        <section class="product_main label1_background">
+            <div class="product_title">
+                <img src="img/red_title@2x-8.png" alt="title">
+            </div>
+            <div class="product_detail">
+                <a href="#"><img src="img/red_item@2x-8.png" alt="red_item"></a>
+                <p>
+                    <span class="text_yellow">特製からしマヨネーズ</span>と<span class="text_yellow">ふりかけ</span>と<br>
+                    <span class="text_yellow">ソース</span>の<span class="text_yellow">スパイス感</span>
+                    の王道焼そば！<br>
+                    一度二度うま！<br>
+                    <span class="text_yellow">こってりマヨビーム仕上げ！</span>
+                </p>
+            </div>
+            <div class="product_special">
+                <a href="#"><img class="product_pc" src="img/red_umami@2x-8.png" alt=""></a>
+                <a href="#"><img class="product_mobile" src="img/product_mobile_red.png" alt=""></a>
+            </div>
+            <div class="product_button">
+                <button>詳細ページへ<i class="fa-regular"></i></button>
+            </div>
+        </section>
+        <!-- end product label1 red  -->
+        <!-- product label2 blue start -->
+        <section class="product_main label2_background">
+            <div class="product_title">
+                <img src="img/blue_title@2x-8.png" alt="title">
+            </div>
+            <div class="product_detail">
+                <a href="#"><img src="img/blue_item@2x-8.png" alt="red_item"></a>
+                <p>
+                    <span class="text_blue">特製ガリックマヨ</span>と<br>
+                    うまみの詰まった塩だれ味 ! <br>塩なのに、<span class="text_blue">しっかりこってり</span><br>
+                    味わえます ! !
+                </p>
+            </div>
+            <div class="product_special">
+                <a href="#"><img class="product_pc" src="img/blue_umami@2x-8.png" alt=""></a>
+                <a href="#"><img class="product_mobile" src="img/product_mobile_blue.png" alt=""></a>
+            </div>
+            <div class="product_button">
+                <button>詳細ページへ<i class="fa-regular"></i></button>
+            </div>
+        </section>
+        <!-- end product label2 blue  -->
+        <!-- product label3 pink start -->
+        <section class="product_main label3_background">
+            <div class="product_title">
+                <img src="img/pink_title@2x-8.png" alt="title">
+            </div>
+            <div class="product_detail">
+                <a href="#"><img src="img/pink_item@2x-8.png" alt="red_item"></a>
+                <p>
+                    <span class="text_pink">特製明太子マヨと</span><br>
+                    うまみの詰まった明太子味 ! <br>
+                    <span class="text_pink">後引く旨辛</span>でこってりな<br>
+                    味わえます !!
+                </p>
+            </div>
+            <div class="product_special">
+                <a href="#"><img class="product_pc" src="img/pink_umami@2x-8.png" alt=""></a>
+                <a href="#"><img class="product_mobile" src="img/product_mobile_pink.png" alt=""></a>
+            </div>
+            <div class="product_button">
+                <button>詳細ページへ<i class="fa-regular"></i></button>
+            </div>
+        </section>
+        <!-- end product label3 pink  -->
+        <!-- product label4 pink start -->
+        <section class="product_main label4_background">
+            <div class="product_title">
+                <img src="img/red2_title@2x-8.png" alt="title">
+            </div>
+            <div class="product_detail">
+                <a href="#"><img src="img/red2_item@2x-8.png" alt="red_item"></a>
+                <p>
+                    特製からしマヨネーズと<br>
+                    ふりかけとソースのスパイス感の<br>
+                    <span class="text_yellow">大盛＆王道焼そば</span> !<br>
+                    こってりマヨビーム仕上げ、<br>
+                    <span class="text_yellow">最後まで食べ飽きない </span>! !
+                </p>
+            </div>
+            <div class="product_special">
+                <a href="#"><img class="product_pc" src="img/red2_umami@2x-8.png" alt=""></a>
+                <a href="#"><img class="product_mobile" src="img/product_mobile_red2.png" alt=""></a>
+            </div>
+            <div class="product_button">
+                <button>詳細ページへ<i class="fa-regular"></i></button>
+            </div>
+        </section>
+        <!-- end product label4 pink  -->
+        <!-- end product -->
+        <!-- content button start -->
+        <section class="content_button">
+            <a>他の商品も見てみる<i class="fa-regular"></i></a>
+        </section>
+        <!-- end content button -->
+        <!-- recipe hitory start -->
+        <section class="recipe">
+            <div class="history_right"><img src="img/history_img@2x-8.png" alt="hitory"></div>
+            <div class="recipe_left"><img src="img/recipe_img@2x-8.png" alt="recipe"></div>
+        </section>
+        <!-- end recipe hitory -->
+    </main>
+    <!-- end main -->
+    <!-- footer start -->
+    <footer>
+        <section class="contact">
+            <img class="footer_banner" src="img/footer_banner@2x-8.png" alt="footer_banner">
+            <div class="contact_icon">
+                <h3 class="text_share">SHARE <span class="text_do">する</span></h3>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>&ensp;
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </section>
+        <section class="company_name">
+            <img src="img/footer_logo@2x-8.png" alt="footer_logo">
+            <h6>All Right Reserved, Copyright (c) <br class="break_row_mobile">MYOJO FOODS CO.,LTD</h6>
+        </section>
+    </footer>
+    <!-- end footer -->
+
+</body>
+</html>
