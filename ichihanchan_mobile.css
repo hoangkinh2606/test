@@ -1,3 +1,5 @@
+
+/* pc css start */
 @media (min-width:769px){
     .mv_main_mobile{
         display:none;
@@ -8,12 +10,23 @@
     .break_row_mobile{
         display:none;
     }
+    .close_toggle, .toggle{
+        display:none;
+    }   
+    .menu_list_break{
+        display:none;
+    }
+    .product_title_sp, .product_item_title_sp{
+        display:none;
+    }
     
 }
+/* end pc css */
+/* mobile start */
 @media (max-width:768px){
     body{
-        margin: 0;
-        background-color: black;
+        margin:0;
+        background-color:black;
     }
     .mv_main_pc{
         display:none;
@@ -21,54 +34,93 @@
     
     header .toggle{
         display:block;
-        margin: 0;
+        margin:0;
     }
     .menu .menu_list{
-        width:100%;
+        display:none;
+    
     }
-    .menu .menu_list{
-        font-weight: 600;
+    .menu .menu_list .list_space{
+        padding-top:350px;
+    }
+    .menu .menu_list.active{
+        display:block;
+        font-weight:600;
         position:fixed;
         width:100%;
         height:100%;
-        top:0;
         margin:0px;
-        padding:20px;
         text-align:center;
         background-color:red;
         flex-direction:column;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        transition:0.3s;
+        padding:50px;
     }
-   
+   .menu_footer{
+        display:block;
+        display:flex;
+        text-align:center;
+        align-items:center;
+        background-color:#fff;
+   }
+   .menu_list .menu_footer a{
+    font-size:30px;
+   }
+   .menu_footer img{
+        width:600px;
+   }
     .mv_main_mobile{
         display:block;
         width:100%;
         height:auto;
-        
     }
-
     .logo{
         position:relative;
+        width:100%;
     }
-   
+    .logo img{
+        width:100%;
+        padding:20px;
+    }
+    .menu ul li{
+        padding:85px;
+        border-bottom:5px solid #ff4a4a;
+    }
     .menu ul li a{
-        background-image: none;
-        border-top: 2px solid white;
-        font-size: 60px;
+        background-image:none;
+        font-size:80px;
+        font-weight:700;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .menu ul li a:hover{
+        background-image:none;
+    }
+    .toggle{
+        display:none;
+        color:#fff;
+        text-align:right;
+        padding:30px;
+        font-size:20px;
+        cursor:pointer;
+    }
+    .toggle img{
+        width:45%;
+        height:auto;
+        padding:20px;
+    }
+    .menu_list .close_toggle{
+        position:absolute;
+        right:0;
+        border:none;
+        padding-bottom:30px;
+    }
+    .close_toggle img{
+        width:200px;
+        padding:20px 20px;
+    }
     .video_informacion{
         flex-direction:column;
     }
@@ -84,40 +136,68 @@
         padding:0 30px;
     }
     .video_one p,.video_two p{
-        font-size:50px;
+        font-size:35px;
     }
-
-
-
-
-
-
-
-
-
-
-
+    .product_item_title_pc{
+        display:none;
+    }
     .product_main{
         background-position:0 420px;
         padding:0;
         margin:0;
     }
+    .label1_background{
+        background-image:url(img/background_sp_red.png);
+        background-repeat:no-repeat;
+        background-size:100% 85%;
+        background-position:0 -45px;
+    }
+    .label2_background{
+        background-image:url(img/background_sp_blue.png);
+        background-repeat:no-repeat;
+        background-size:100% 90%;
+        background-position:0 -55px;
+    }
+    .label3_background{
+        background-image:url(img/background_sp_pink.png);
+        background-repeat:no-repeat;
+        background-size:100% 85%;
+        background-position:0 -55px;
+    }
+    .label4_background{
+        background-image:url(img/background_sp_red2.png);
+        background-repeat:no-repeat;
+        background-size:100% 85%;
+        background-position:0 -55px;
+    }
+    .product_item_title{
+        padding:0;
+    }
+    .product_title_pc{
+        display:none;
+    }
+    .product_item_title img{
+        width:100%;
+        height:auto;
+    }
     .product_pc{
         display:none;
     }
-    .product_title img{
-        max-width:100%;
+    .product_title{
+        padding:100px 0 60px 0;
+    }
+    .product_title_sp{
+        width:100%;
+        padding-top:150px 20px;
     }
     .product_detail{
         flex-direction:column;
     }
     .product_detail img{
-        max-width:100%;
         margin:0;
         padding:0;
     }
     .product_detail p{
-        font-size:50px;
         max-width:100%;
         margin:0;
         padding:70px 0 0;
@@ -125,34 +205,28 @@
     }
     .product_special{
         width:100%;
+        padding:0;
     }
     .product_special .product_mobile{
         width:100%;
-        
         padding:0;
         margin:0;
     }
-    .product_mobile{
-        display:block;
-    }
     .product_button{
-        padding:110px 0 150px;
+        align-items:center;
+        padding:110px 0 40px;
     }
     .product_button button{
         width:56%;
         height:140px;
         font-size:32px;
     }
-    .content_button a{
-        padding:70px 365px;
-        font-size:40px;
-    }
     .recipe{
         flex-direction:column;
     }
     .history_right img{
         margin:0;
-        width: 100%;
+        width:100%;
         height:auto;
         padding:20px 0px 50px;
     }
@@ -167,30 +241,43 @@
     .footer_banner{
         width:100%;
         height:auto;
-        padding:24px;
-        margin:0;
+        padding:50px 24px 0;
     }
     .contact_icon{
-        width:100%;
-        font-size:80px;
+        padding:0 0 50px;
     }
     .text_share{
         display:block;
-        font-size:100px;
+        font-size:50px;
     }
     .text_do{
-        display:block;
-        font-size:80px;
+        font-size:40px;
+    }
+    .fa-brands{
+        padding:0;
+        margin:0;
+    }
+    .fa-twitter{
+        padding:18px;
+    }
+    .fa-facebook-f{
+        padding:17px 24px;
+    }
+    .company_name{
+        text-align:center;
+        padding:20px;
     }
     .company_name img{
         width:60%;
         height:auto;
+        padding:55px 0;
     }
     .company_name h6{
-        font-size:40px;
+        background-color:#f9d3d4;
+        display:inline;
+        font-size:24px;
         font-weight:500;
+        padding:0;
     }
-
-
-
 }
+/* end mobile css  */

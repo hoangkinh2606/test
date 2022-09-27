@@ -1,77 +1,69 @@
 body{
     margin:0;
-    padding:0;
     border:0;
-    max-width:100%;
+    width:100%;
     background-color:black;
 }
 *{
-        box-sizing: border-box;
+    box-sizing:border-box;
 }
 /* header start */
 .logo{
-    width:200px;
-    height:auto;
+    width:26%;
     padding:20px 13px;
 }
 .logo img{
-    width:100%;
+    width:250px;
+    height:auto;
 }
 header{
-    width:1280px;
     margin:auto;
 }
 .header_now{
-    display: flex;
+    display:flex;
     justify-content:space-evenly;
     align-items:center;
 }
 .menu{
-    padding-left: 210px;
+    padding-right:20px;
     padding-bottom:50px;
     width:100%;
 }
 .menu ul{
     display:flex;
     list-style-type:none;
-    padding:0;
+    padding:0 60px 0;
+    justify-content:flex-end;
 }
 .menu ul li a{
+    font-weight:700;
     text-decoration:none;
     color:white;
-    padding:20px 60px;
+    padding:22px 50px;
     font-size:20px;
     text-align:center;
-    background-image: url(img/star.png);
+    background-image:url(img/star.png);
     background-repeat:no-repeat;
-    background-position: -30px -26px;
+    background-position:-30px -26px;
 }
 .menu ul li a:hover{
-    background-image: url(img/bright_start.png);
+    background-image:url(img/bright_start.png);
+    transition:0.3s;
 }
-.toggle{
+.menu_footer{
     display:none;
-    background:red;
-    color:#fff;
-    text-align:right;
-    padding:30px;
-    font-size:20px;
-    cursor:pointer;
 }
 /* end header */
 /* main start */
 main{
-    width:1280px;
+    width:100%;
     margin:auto;
 }
 .video_main{
-    padding-bottom: 60px;
-}
-.mv_main_pc{
-    max-width:100%;
-}
+    padding-bottom:60px;
+}   
 .video_title{
-    text-align: center;
+    text-align:center;
     padding:60px 0 10px;
     box-sizing:border-box;
 }
@@ -85,6 +77,7 @@ main{
 }
 .video_informacion img{
     padding-bottom:0;
+    transition-duration:0.5s;
 }
 .video_one{
     width:45%;
@@ -92,14 +85,14 @@ main{
     padding-top:7px;
 }
 .video_one p,.video_two p{
-    color: red;
+    color:red;
     text-align:center;
     margin:0;
     font-weight:600;
 }
 .video_one img:hover, .video_two img:hover{
     transform:scale(1.1);
-    transition-duration:0.3s;
+    transition-duration:0.5s;
 }
 .video_two{
     width:45%;
@@ -109,100 +102,107 @@ main{
     padding-bottom:60px;
 }
 .product_item_title img{
-    max-width:1280px;
+    width:100%;
 }
-.product_main{
-    max-width:1280px;
-    height:auto;
+.mv_main_pc{
+    width:100%;
 }
 .label1_background{
     background:url(img/label_red.png);
     background-position:0 30px;
     background-repeat:no-repeat;
+    background-size:100% 100%;
 }
 .label2_background{
     background:url(img/label_blue.png);
     background-position:0 30px;
     background-repeat:no-repeat;
+    background-size:100% 100%;
 }
 .label3_background{
     background:url(img/label_pink.png);
     background-position:0 30px;
     background-repeat:no-repeat;
+    background-size:100% 100%;
 }
 .label4_background{
     background:url(img/label_red2.png);
     background-position:0 30px;
     background-repeat:no-repeat;
+    background-size:100% 100%;
 }
 .product_title{
-    max-width:100%;
+    width:100%;
     text-align:center;
-    padding:79px;
+    padding:95px 218px;
 }
-.product_title img{
-    max-width:849px;
+.product_title_pc{
+    max-width:100%;
     height:auto;
 }
 .product_detail{
     display:flex;
-    justify-content:space-evenly;
+    justify-content:center;
     align-items:center;
 }
 .product_detail img{
-    max-width:430px;
+    width:430px;
     height:auto;
-    padding-left:50px;
+    padding:0 30px;
 }
-.product_detail p{
-    max-width:450px;
+.product_detail p{  
     color:white;
     font-weight:600;
     font-size:27px;
-    margin-left:-100px;
+    padding-left:30px;
 }
 .text_yellow{
-    color: #ffff00;
+    color:#ffff00;
 }
 .text_blue{
-    color: #00b2ff;
+    color:#00b2ff;
 }
 .text_pink{
-    color: #ff5167;
+    color:#ff5167;
 }
 .product_special{
     text-align:center;
-    padding-top:22px;
+    padding-top:10px;
 }
 .product_special img{
-    width:820px;
+    width:100%;
     height:auto;
+    padding:0 210px;
 }
 .product_button{
     text-align:center;
-    padding:60px 0 100px;
+    padding:75px 0 100px;
 }
-.product_button button{
-    position: relative;
+.product_button a{
+    position:relative;
     font-size:25px;
     background-color:#f6f600;
-    width:360px;
-    height:90px;
-    font-weight:600;
+    padding:20px 100px;
+    font-weight:700;
+    box-shadow:1px 1px 1px 1px rgba(246, 246, 243, 0.9),
+    -1px -2px 1px 1px rgba(188, 241, 241, 0.9);
+    border:none;
+    text-decoration:none;
 }
-.product_button button:hover{
-    transform:scale(1.1);
+.product_button a:hover{
+    opacity:0.7;
+    transition:0.3s;
 }
 .product_button .fa-regular::after{
     font-family:'FontAwesome';
     content:'\f054';
     position:absolute;
     right:15px;
-    top:30px;
+    top:20px;
 }
 .content_button{
     text-align:center;
-    padding:115px 20px;
+    padding:118px 30px 150px;
 }
 .content_button a{ 
     position:relative;
@@ -215,6 +215,7 @@ main{
 }
 .content_button a:hover{
     opacity:0.6;
+    transition:0.3s;
 }
 .fa-regular::after{
     font-family:'FontAwesome';
@@ -234,19 +235,19 @@ main{
     padding:70px;
 }
 .history_right img{
-    width:400px;
-    height:200px;
+    width:420px;
+    height:auto;
     padding-right:20px;
 }
 .recipe_left img{
-    width:400px;
-    height:200px;
+    width:420px;
+    height:auto;
     padding-left:20px;
 }
 /* end main */
 /* footer start */
 footer{
-    width:1280px;
+    padding:0;
     margin:auto;
 }
 .contact{
@@ -254,12 +255,10 @@ footer{
     justify-content:center;
     align-items:center;
     background-color:#fff;
-    padding:45px;
 }
 .footer_banner{
     width:280px;
     height:auto;
-    margin-right:90px;
 }
 .fa-brands{
     font-size:20px;
@@ -272,7 +271,7 @@ footer{
     border-radius:50%;
 }
 .fa-facebook-f{
-    color: #fff;
+    color:#fff;
     font-size:30px;
     background-color:#1673e1;
     border-radius:50%;
@@ -280,30 +279,36 @@ footer{
 }
 .contact_icon{
     text-align:center;
+    padding:60px 0 90px 80px;
+}
+.contact_icon a{
+    padding-top:20px;
 }
 .text_share{
-    font-size:25px;
+    font-size:30px;
     margin-bottom:15px;
+    font-weight:700;
 }
 .text_do{
-    font-size:20px;
+    font-size:25px;
 }
 .company_name{
     background-color:#FF0000;
+    text-align:center;
 }
 .company_name img{
     text-align:center;
-    padding:40px 0 5px;
+    padding:40px 0;
     display:block;
     margin-left:auto;
     margin-right:auto;
-    width:185px;
+    width:300px;
     height:auto;
 }
 .company_name h6{
-    text-align:center;
+    padding-bottom:20px;
     color:#fff;
-    padding-bottom:10px;
+    margin:0;
 }
 /* end footer */
 

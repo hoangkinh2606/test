@@ -2,11 +2,12 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ichihanchan.css">
     <link rel="stylesheet" href="ichihanchan_mobile.css">
     <link rel="stylesheet" href="ichihanchan_pc.css">
+    <link rel="stylesheet" href="ichihanchan_tablet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
@@ -15,44 +16,53 @@
 <body>
     <script>
         $(document).ready(function(){
+
             $('.toggle').click(function(){
-                $('.menu').slideToggle();
+                $('.menu_list').addClass('active');
+                $('body').css('overflow', 'hidden');
+            });
+
+            $('.close_toggle').click(function(){
+                $('.menu_list').removeClass('active');
+                $('body').css('overflow', 'auto');
             });
         })
-    </script>
+        </script>
     <!-- header start -->
     <header>
         <section class="header_now">
-            <!-- <div class="header_one">
-                <h1 class="logo"> 
-                    <a href="#"><img src="img/logo@2x-8.png" alt="logo"></a>
-                </h1>
-                <div class="toggle">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </div> -->
             <h1 class="logo"> 
                 <a href="#"><img src="img/logo@2x-8.png" alt="logo"></a>
             </h1>
             <div class="menu">
                 <div class="toggle">
-                    <i class="fa-solid fa-bars"></i>
+                    <img src="img/open_menu.png" alt="open_menu">
                 </div>
-                <ul class="menu_list">
-                    <li><a href="#">商品情報</a></li>
-                    <li><a href="#"></i>CM</a></li>
-                    <li><a href="#">ヒストリー</a></li>
-                    <li><a href="#">ちょい足しレシピ</a></li>
-                </ul>
+                <nav >
+                    <ul class="menu_list">
+                        <li class="close_toggle">
+                            <img src="img/close.png" alt="">
+                        </li>
+                        <li class="menu_list_sp list_space"><a href="#">商品情報</a></li>
+                        <li class="menu_list_sp"><a href="#"></i>CM <span class="menu_list_break">情報</span></a></li>
+                        <li class="menu_list_sp"><a href="#"><span class="menu_list_break">一平ちゃん<br>誕生からの</span>ヒストリー</a></li>
+                        <li class="menu_list_sp"><a href="#">ちょい足しレシピ</a></li>
+                        <li class="menu_footer">
+                            <img src="img/footer_logo_1.png" alt="footer footer_banner">
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </section>
     </header>
     <!-- end header -->
     <main>
-        <!-- mv start -->
+            <!-- mv start -->
         <section class="mv_main">
-                <img class="mv_main_pc" src="img/mv_pc.png" alt="mv_pc">
-                <img class="mv_main_mobile" src="img/main_sp@2x-8.png" alt="mv_mobile">
+            <img class="mv_main_pc" src="img/mv_pc.png" alt="mv_pc">
+            <img class="mv_main_mobile" src="img/main_sp@2x-8.png" alt="mv_mobile">
         </section>
         <!-- end mv -->
         <!-- video start -->
@@ -74,14 +84,16 @@
         <!-- end video -->
         <!-- item_title start -->
         <section class="product_item_title">
-            <img src="img/item_title@2x-8.png" alt="item_title">
+            <img class="product_item_title_pc" src="img/item_title@2x-8.png" alt="item_title">
+            <img class="product_item_title_sp" src="img/item_title_sp.png" alt="item_title">
         </section>
         <!-- end item_title -->
         <!-- product start -->
         <!-- product label1 red start -->
-        <section class="product_main label1_background">
+        <section class="product_main label1_background label1_one">
             <div class="product_title">
-                <img src="img/red_title@2x-8.png" alt="title">
+                <img class="product_title_pc" src="img/red_title@2x-8.png" alt="title">
+                <img class="product_title_sp" src="img/red_title_sp.png" alt="title">
             </div>
             <div class="product_detail">
                 <a href="#"><img src="img/red_item@2x-8.png" alt="red_item"></a>
@@ -98,14 +110,15 @@
                 <a href="#"><img class="product_mobile" src="img/product_mobile_red.png" alt=""></a>
             </div>
             <div class="product_button">
-                <button>詳細ページへ<i class="fa-regular"></i></button>
+                <a href="#">詳細ページへ<i class="fa-regular"></i></a>
             </div>
         </section>
         <!-- end product label1 red  -->
         <!-- product label2 blue start -->
         <section class="product_main label2_background">
             <div class="product_title">
-                <img src="img/blue_title@2x-8.png" alt="title">
+                <img class="product_title_pc" src="img/blue_title@2x-8.png" alt="title">
+                <img class="product_title_sp" src="img/blue_title_sp.png" alt="title">
             </div>
             <div class="product_detail">
                 <a href="#"><img src="img/blue_item@2x-8.png" alt="red_item"></a>
@@ -120,14 +133,15 @@
                 <a href="#"><img class="product_mobile" src="img/product_mobile_blue.png" alt=""></a>
             </div>
             <div class="product_button">
-                <button>詳細ページへ<i class="fa-regular"></i></button>
+                <a href="#">詳細ページへ<i class="fa-regular"></i></a>
             </div>
         </section>
         <!-- end product label2 blue  -->
         <!-- product label3 pink start -->
         <section class="product_main label3_background">
             <div class="product_title">
-                <img src="img/pink_title@2x-8.png" alt="title">
+                <img class="product_title_pc" src="img/pink_title@2x-8.png" alt="title">
+                <img class="product_title_sp" src="img/pink_title_sp.png" alt="title">
             </div>
             <div class="product_detail">
                 <a href="#"><img src="img/pink_item@2x-8.png" alt="red_item"></a>
@@ -143,14 +157,15 @@
                 <a href="#"><img class="product_mobile" src="img/product_mobile_pink.png" alt=""></a>
             </div>
             <div class="product_button">
-                <button>詳細ページへ<i class="fa-regular"></i></button>
+                <a href="#">詳細ページへ<i class="fa-regular"></i></a>
             </div>
         </section>
         <!-- end product label3 pink  -->
         <!-- product label4 pink start -->
         <section class="product_main label4_background">
             <div class="product_title">
-                <img src="img/red2_title@2x-8.png" alt="title">
+                <img class="product_title_pc" src="img/red2_title@2x-8.png" alt="title">
+                <img class="product_title_sp" src="img/red_title_sp.png" alt="title">
             </div>
             <div class="product_detail">
                 <a href="#"><img src="img/red2_item@2x-8.png" alt="red_item"></a>
@@ -167,7 +182,7 @@
                 <a href="#"><img class="product_mobile" src="img/product_mobile_red2.png" alt=""></a>
             </div>
             <div class="product_button">
-                <button>詳細ページへ<i class="fa-regular"></i></button>
+                <a href="#">詳細ページへ<i class="fa-regular"></i></a>
             </div>
         </section>
         <!-- end product label4 pink  -->
@@ -177,18 +192,18 @@
             <a>他の商品も見てみる<i class="fa-regular"></i></a>
         </section>
         <!-- end content button -->
-        <!-- recipe hitory start -->
-        <section class="recipe">
-            <div class="history_right"><img src="img/history_img@2x-8.png" alt="hitory"></div>
-            <div class="recipe_left"><img src="img/recipe_img@2x-8.png" alt="recipe"></div>
-        </section>
-        <!-- end recipe hitory -->
     </main>
     <!-- end main -->
     <!-- footer start -->
     <footer>
+        <!-- recipe hitory start -->
+        <section class="recipe">
+            <div class="history_right"><a href="#"><img src="img/history_img@2x-8.png" alt="hitory"></a></div>
+            <div class="recipe_left"><a href="#"><img src="img/recipe_img@2x-8.png" alt="recipe"></a></div>
+        </section>
+        <!-- end recipe hitory -->
         <section class="contact">
-            <img class="footer_banner" src="img/footer_banner@2x-8.png" alt="footer_banner">
+            <a href="#"><img class="footer_banner" src="img/footer_banner@2x-8.png" alt="footer_banner"></a>
             <div class="contact_icon">
                 <h3 class="text_share">SHARE <span class="text_do">する</span></h3>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>&ensp;
@@ -197,7 +212,7 @@
         </section>
         <section class="company_name">
             <img src="img/footer_logo@2x-8.png" alt="footer_logo">
-            <h6>All Right Reserved, Copyright (c) <br class="break_row_mobile">MYOJO FOODS CO.,LTD</h6>
+            <h6>All Right Reserved, Copyright ©︎<br class="break_row_mobile">MYOJO FOODS CO.,LTD</h6>
         </section>
     </footer>
     <!-- end footer -->
